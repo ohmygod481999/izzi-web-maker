@@ -1,5 +1,6 @@
 import React from "react";
 import NavItem from "./NavItem";
+import { Link } from "react-router-dom";
 
 function Sidenav() {
     return (
@@ -19,21 +20,21 @@ function Sidenav() {
                 <ul className="sidebar-menu">
                     <li className="menu-header">Main</li>
                     <li className="dropdown active">
-                        <a href="index.html" className="nav-link">
+                        <Link to="/app" className="nav-link">
                             <i data-feather="monitor" />
                             <span>Dashboard</span>
-                        </a>
+                        </Link>
                     </li>
                     <NavItem
                         title="Widgets"
                         dropdownItems={[
                             {
-                                title: "a",
-                                to: "/a",
+                                title: "test",
+                                to: "/app/test",
                             },
                             {
                                 title: "b",
-                                to: "/b",
+                                to: "/app/b",
                             },
                         ]}
                     />

@@ -3,10 +3,14 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import * as serviceWorker from "./serviceWorker";
 import Routes from "./routes/index";
+import { ApolloProvider } from "@apollo/client";
+import { client } from "./utils/apolo-client";
 
 ReactDOM.render(
     <React.StrictMode>
-        <Routes />
+        <ApolloProvider client={client}>
+            <Routes />
+        </ApolloProvider>
     </React.StrictMode>,
     document.getElementById("root")
 );

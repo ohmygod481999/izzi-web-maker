@@ -13,8 +13,8 @@ const queries = {
                     keyword: ""
                     limit: ${limit ? limit : 5}
                     offset: ${offset ? offset : 0}
-                    order: ${order ? order : "desc"}
-                    sort: ${sort ? sort : "createdDate"}
+                    order: "${order ? order : "desc"}"
+                    sort: "${sort ? sort : "createdDate"}"
                     languageId: "${Config.languageId}"
                     merchantId: "${Config.merchantId}"
                 }

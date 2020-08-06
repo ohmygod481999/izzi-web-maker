@@ -30,7 +30,7 @@ export class QuerySingle {
 const getQueryMulti = (
     name = "users",
     params = {},
-    items = ["id", "name", "subDescription", "images {id, name}"]
+    items = ["id", "name"]
 ) => {
     return gql`
     query {
@@ -46,7 +46,8 @@ const getQueryMulti = (
                 }", 
                 merchantId: "${
                     params.merchantId ? params.merchantId : Config.merchantId
-                }"
+                }",
+                ${params.themeWebId ? `themeWebId:"${params.themeWebId}"` : ""}
             }
         ) {
             totalCount

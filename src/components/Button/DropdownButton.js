@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 function DropdownButton({ title, color = "warning", ...props }) {
     return (
-        <div className="dropdown">
+        <div className={`dropdown ${props.className}`} {...props}>
             <a
                 href="#"
                 data-toggle="dropdown"

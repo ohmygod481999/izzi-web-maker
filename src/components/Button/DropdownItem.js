@@ -3,7 +3,11 @@ import PropTypes from "prop-types";
 
 function DropdownItem({ href, icon, ...props }) {
     return (
-        <a href="#" className={`dropdown-item ${icon ? "has-icon" : ""}`}>
+        <a
+            href={href}
+            {...props}
+            className={`dropdown-item ${icon ? "has-icon" : ""}`}
+        >
             {icon ? icon : null} {props.children}
         </a>
     );
